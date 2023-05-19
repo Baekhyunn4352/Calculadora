@@ -1,0 +1,61 @@
+loop = 0;
+
+#Solicitação do primeiro valor
+num = float(input("Digite o primeiro valor: "));
+
+#Solicitação do operador necessário para a operação
+op = int(input("Qual operação você deseja realizar?\n 1- Adição \n 2- Subtração\n 3- Divisão\n 4- Multiplicação\n "))
+
+#Verificação do operador
+if op == 1:
+  loop += 1;
+  print("----->Adição<-----");
+elif op == 2:
+  loop += 1;
+  print("----->Subtração<-----");
+elif op == 3:
+  loop += 1;
+  print("----->Divisão<-----");
+elif op == 4:
+  loop += 1;
+  print("----->Multiplicação<-----");
+else:
+  print("----->Operador não encontrado<-----");
+
+#Looping para repetição da seleção de operadores caso tenha algum valor inválido
+while loop == 0:
+  op = int(input("Qual operação você deseja realizar?\n 1- Adição \n 2- Subtração\n 3- Divisão\n 4- Multiplicação\n "))
+  if op == 1:
+    loop += 1;
+    print("----->Adição<-----");
+  elif op == 2:
+    loop += 1;
+    print("----->Subtração<-----");
+  elif op == 3:
+    loop += 1;
+    print("----->Divisão<-----");
+  elif op == 4:
+    loop += 1;
+    print("----->Multiplicação<-----\n");
+  else:
+    print("----->Operador não encontrado<-----")
+
+#Solicitação do segundo valor
+num2 = float(input("Digite o segundo valor: "));
+
+#Fórmulas
+adi = str(num + num2);
+sub = str(num - num2);
+div = str(num / num2);
+mult = str(num * num2);
+
+#Impressão dos resultados
+if op == 1:
+  print("A soma dos dois valores digitados é igual a: " + adi);
+elif op == 2:
+  print("A subtração dos dois valores digitados é igual a: " + sub);
+elif op == 3:
+  print("A divisão dos dois valores digitados é igual a: " + div);
+elif op == 4:
+  print("A multiplicação dos dois valores digitados é igual a: " + mult);
+  
