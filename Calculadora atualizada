@@ -1,0 +1,98 @@
+import math
+
+#Variáveis
+potencia = 1;
+loop = 0;
+
+#Solicitação do operador necessário para a operação
+op = int(input("Calculadora Uninove - Para seguir, informe a opção desejada: \n 1- Adição \n 2- Subtração\n 3- Multiplicação\n 4- Divisão(Resto de Divisão)\n 5- Divisão\n 6- Raiz Quadrada\n 7- Exponenciação\n "))
+
+#Verificação do operador
+if op == 1:
+  loop += 1;
+  print("----->Adição<-----");
+elif op == 2:
+  loop += 1;
+  print("----->Subtração<-----");
+elif op == 3:
+  loop += 1;
+  print("----->Multiplicação<-----");
+elif op == 4:
+  loop += 1;
+  print("----->Divisão(Resto de Divisão)<-----");
+elif op == 5:
+  loop += 1;
+  print("----->Divisão<-----");
+elif op == 6:
+  loop += 1;
+  print("----->Raiz Quadrada<-----");
+elif op == 7:
+  loop += 1;
+  print("----->Exponenciação<-----");
+else:
+  print("----->Dados Inconsistentes!<-----");
+
+#Looping para repetição da seleção de operadores caso tenha algum valor inválido
+while loop == 0:
+  op = int(input("Por favor digite um valor válido!\n 1- Adição \n 2- Subtração\n 3- Multiplicação\n 4- Divisão(Resto de Divisão)\n 5- Divisão\n 6- Raiz Quadrada\n 7- Exponenciação\n "))
+  if op == 1:
+    loop += 1;
+    print("----->Adição<-----");
+  elif op == 2:
+    loop += 1;
+    print("----->Subtração<-----");
+  elif op == 3:
+    loop += 1;
+    print("----->Multiplicação<-----");
+  elif op == 4:
+    loop += 1;
+    print("----->Divisão(Resto de Divisão)<-----");
+  elif op == 5:
+    loop += 1;
+    print("----->Divisão<-----");
+  elif op == 6:
+    loop += 1;
+    print("----->Raiz Quadrada<-----");
+  elif op == 7:
+    loop += 1;
+    print("----->Exponenciação<-----\n");
+  else:
+    print("----->Dados Inconsistentes!<-----")
+
+#Solicitação do primeiro valor e verificação se a escolha for raiz
+if op == 6:
+ num = int(input("Digite o valor da raiz desejada: "));
+else:
+  num = int(input("Digite o primeiro valor: "));
+
+#Fórmula raiz
+raiz = str(math.sqrt(num));
+
+#Solicitação do segundo valor
+if op == 6:
+  print("A raiz Quadrada de" , num , "é igual a: " + raiz);
+elif op == 7:
+  num3 = int(input("Digite o valor do expoente: "));
+else:
+  num2 = int(input("Digite o segundo valor: "));
+
+#Looping para calculo da exponenciação e impressão das demais operações
+if op == 7:
+  for count in range(num3):
+    potencia *= num;
+    count += 1;
+elif op == 1:
+  print("A soma de", num, "+" , num2 , "é igual a:" , num + num2);
+elif op == 2:
+  print("A subtração de", num, "-" , num2, "é igual a:" , num - num2);
+elif op == 3:
+  print("A multiplicação do", num, "por" , num2, "é igual a:" , num * num2);
+elif op == 4:
+  print("O resto da divisão de", num, "por" , num2, "é igual a:" , (float(num % num2)));
+elif op == 5:
+  print("A divisão de", num, "para" , num2, "é igual a:" , (float(num / num2)));
+
+#Impressão da exponenciação
+if op == 7:
+  print("O valor de" , num , "elevado a" , num3 , "é igual a:" , potencia);
+  
